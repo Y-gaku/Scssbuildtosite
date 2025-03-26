@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.meishi-link {
+    text-decoration: none;
+}
+
+.meishi {
+    width: 300px;
+    height: 180px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* 相対位置指定 */
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sei, .mei {
+    max-width: 136px;
+    height: auto;
+    position: relative;
+    top: 30px; 
+}
+
+.info {
+    font-size: 14px;
+    position: absolute;
+    bottom: -2%;
+    left: 2%;
+    text-align: left;
+    color: black;
+}
