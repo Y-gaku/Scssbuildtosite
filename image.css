@@ -76,7 +76,7 @@ body {
     }
 
     .media-item {
-        background-color: #fff;
+        background-color: #FEF0EC;
         flex-direction: row; /* 常に左から右に表示 */
     }
 
