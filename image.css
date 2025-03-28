@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FEF0EC;
+    color: #333;
+    line-height: 1.6;
+}
+
+.media-container-wrapper {
+    position: relative;
+    padding: 20px;
+}
+
+.media-container-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #88B04B;
+}
+
+.media-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.media-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.media-item:last-child {
+    border-bottom: none;
+}
+
+/* portraitモードでのみ適用されるスタイル */
+@media screen and (orientation: portrait) {
+    .media-item:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .media-item:nth-child(odd) img,
+    .media-item:nth-child(odd) iframe {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    .media-item img,
+    .media-item iframe {
+        width: 50%;
+        height: auto;
+        max-width: 50%;
+        margin-right: 20px;
+    }
+
+    .media-caption {
+        width: 50%;
+        text-align: left;
+        padding: 0 20px;
+        color: #88B04B;
+    }
+}
+
+/* landscapeモードでのみ適用されるスタイル */
+@media screen and (orientation: landscape) {
+    .media-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 2px;
+        background-color: lightgray;
+    }
+
+    .media-item {
+        background-color: #fff;
+        flex-direction: row; /* 常に左から右に表示 */
+    }
+
+    .media-item img,
+    .media-item iframe {
+        width: 50%;
+        height: 50vh;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+
+    .media-caption {
+        width: 50%;
+        text-align: left;
+        padding: 0 20px;
+        color: #88B04B;
+    }
+}

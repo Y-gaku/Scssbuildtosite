@@ -1,0 +1,138 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    color: #333;
+    line-height: 1.6;
+}
+
+.portfolio {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio h2 {
+    color: #88B04B;
+    border-bottom: 2px solid #98FB98;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.portfolio-nav {
+    background-color: #F0F0F0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.portfolio-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-nav li {
+    margin: 0 10px;
+}
+
+.portfolio-nav a {
+    text-decoration: none;
+    color: #88B04B;
+    padding: 5px 10px;
+    transition: all 0.3s ease; /* すべてのプロパティの変化を滑らかに */
+}
+  
+.portfolio-nav a:hover {
+    color: #98FB98;
+    font-size: 1.1em; /* ホバー時に文字サイズを大きくする */
+}
+
+.portfolio-items {
+    display:flex;
+    flex-direction: column;
+}
+
+.portfolio-item {
+    margin-bottom: 20px;
+    border: 1px solid #FFF;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.portfolio-item h3 {
+    color: #88B04B;
+    margin-bottom: 10px;
+}
+
+.portfolio-item .caption {
+    font-size: 0.9em; /* 文字サイズ */
+    color: #777; /* 文字色 */
+    margin-top: 10px; /* 上側の余白 */
+    text-align: center; /* 中央寄せ */
+}
+
+.portfolio-item#movie iframe {
+    max-width: 100%; /* 親要素の幅に合わせて最大幅を設定 */
+    width: 800px; /* デフォルトの幅 */
+    height: 450px; /* デフォルトの高さ */
+}
+
+.portfolio-item#audio audio {
+    flex-basis: 200px; /* 音声ファイルの幅 */
+}
+.portfolio-item#audio .audio-caption {
+    max-width: 40%; /* 注釈の最大幅 */
+    margin-top: 10px;
+}
+
+/*---------------------------------------------------------------------------------------*/
+/* 横向き（landscape）のスタイル */
+@media screen and (orientation: landscape) {
+    .portfolio {
+        width: 90%;
+    }
+
+    .portfolio-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+        width: 48%;
+    }
+}
+
+/* 縦向き（portrait）のスタイル */
+@media screen and (orientation: portrait) {
+    .portfolio {
+        width: 95%;
+    }
+
+    .portfolio-items {
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+
+    .portfolio-nav ul {
+        flex-direction: column; /* 縦並び */
+        align-items: center; /* 中央揃え */
+    }
+
+    .portfolio-nav li {
+        margin: 5px 0; /* 上下の余白 */
+    }
+
+    .portfolio-item#youtube iframe {
+        width: 100%; /* 画面幅に合わせて幅を調整 */
+    }
+}
