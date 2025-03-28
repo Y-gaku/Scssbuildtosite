@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <section class="portfolio">
+        <h2>ポートフォリオ</h2>
+        <nav class="portfolio-nav">
+            <ul>
+                <li><a href="#movie">movie</a></li>
+                <li><a href="#audio">audio</a></li>
+                <li><a href="#image">image</a></li>
+                <li><a href="#text">text</a></li>
+            </ul>
+        </nav>
+        <div class="portfolio-items">
+            <div class="portfolio-item" id="movie">
+                <h3>動画</h3>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/1bWsTLolLpo" title="The Nikkei saw the biggest decline" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p class="caption">動画の説明や補足情報を記述します。</p>
+            </div>
+            <div class="portfolio-item" id="audio">
+                <h3>音声</h3>
+                <audio controls src="audio.wav"></audio>
+                <p class="caption">e-niwa出演：ラジオで実際に流れた音声の録音</p>
+                <audio controls src="audio.wav"></audio>
+                <p class="caption">Ableton live12で練習として作成した楽曲。友人とラップ楽曲を制作中✌</p>
+            </div>
+            <div class="portfolio-item" id="image">
+                <h3>画像</h3>
+                <img src="image.jpg" alt="ポートフォリオ画像">
+                <p class="caption">動画の説明や補足情報を記述します。</p>
+            </div>
+            <div class="portfolio-item" id="text">
+                <h3>文書</h3>
+                <a href="document.md" target="_blank">テキストファイルを開く</a>
+                <p class="caption">動画の説明や補足情報を記述します。</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
