@@ -20,64 +20,64 @@ body {
 
 .media-container {
     width: 100%;
-    height: 100vh;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 20px;
 }
 
 .media-item {
     display: flex;
-    align-items: center;
-    flex: 1;
     border-bottom: 1px solid #ddd;
+    background-color: #FEF0EC;
 }
 
 .media-item:last-child {
     border-bottom: none;
 }
 
-/* portraitモードでのみ適用されるスタイル */
-@media screen and (orientation: portrait) {
-  .media-container {
-    display: grid;
-    grid-template-columns: 1fr; /* portrait表示では1列 */
-    gap: 20px;
-  }
-
-  .media-item {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .media-item iframe,
-  .media-item img {
-    max-height: 300px; /* コンテンツの最大高さ */
+.media-item img,
+.media-item iframe {
     width: 100%;
     object-fit: contain;
-  }
+}
 
-  .media-caption {
-    max-height: 150px; /* 説明文の最大高さ */
-    overflow-y: auto; /* スクロールバー */
-    margin-top: 10px;
+.media-caption {
     color: #88B04B;
-  }
+}
+
+/* portraitモードでのみ適用されるスタイル */
+@media screen and (orientation: portrait) {
+    .media-container {
+        grid-template-columns: 1fr;
+    }
+
+    .media-item {
+        flex-direction: column;
+    }
+
+    .media-item img,
+    .media-item iframe {
+        max-height: 300px;
+    }
+
+    .media-caption {
+        max-height: 150px;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
 }
 
 /* landscapeモードでのみ適用されるスタイル */
 @media screen and (orientation: landscape) {
     .media-container {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
-        grid-gap: 2px;
-        background-color: lightgray;
+        gap: 20px;
     }
 
     .media-item {
-        background-color: #FEF0EC;
-        flex-direction: row; /* 常に左から右に表示 */
+        flex-direction: row;
+	align-items: center;
     }
 
     .media-item img,
@@ -85,13 +85,11 @@ body {
         width: 50%;
         height: 50vh;
         margin-right: 20px;
-        margin-left: 0;
     }
 
     .media-caption {
         width: 50%;
         text-align: left;
         padding: 0 20px;
-        color: #88B04B;
     }
 }
