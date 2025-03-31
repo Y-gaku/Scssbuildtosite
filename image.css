@@ -39,30 +39,30 @@ body {
 
 /* portraitモードでのみ適用されるスタイル */
 @media screen and (orientation: portrait) {
-    .media-item:nth-child(odd) {
-        flex-direction: row-reverse;
-    }
+  .media-container {
+    display: grid;
+    grid-template-columns: 1fr; /* portrait表示では1列 */
+    gap: 20px;
+  }
 
-    .media-item:nth-child(odd) img,
-    .media-item:nth-child(odd) iframe {
-        margin-right: 0;
-        margin-left: 20px;
-    }
+  .media-item {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .media-item img,
-    .media-item iframe {
-        width: 50%;
-        height: auto;
-        max-width: 50%;
-        margin-right: 20px;
-    }
+  .media-item iframe,
+  .media-item img {
+    max-height: 300px; /* コンテンツの最大高さ */
+    width: 100%;
+    object-fit: contain;
+  }
 
-    .media-caption {
-        width: 50%;
-        text-align: left;
-        padding: 0 20px;
-        color: #88B04B;
-    }
+  .media-caption {
+    max-height: 150px; /* 説明文の最大高さ */
+    overflow-y: auto; /* スクロールバー */
+    margin-top: 10px;
+    color: #88B04B;
+  }
 }
 
 /* landscapeモードでのみ適用されるスタイル */
